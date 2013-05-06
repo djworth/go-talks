@@ -5,8 +5,94 @@ Dramafever
 http://danworth.com
 @djworth
 
-* Topics Coveraged
+* Topics Covered
 
-- Item 1
-- Item 2
-- Item 2
+- What is Go?
+- Go Development Environment
+- Go Toolchain
+- Go program structure
+- Common Data Structures (and their python equivalents) 
+- Unit Testing
+- Deployment
+- Common gotchas going from python to go
+
+* What is Go?
+
+- A new programming language (Developed by Google)
+- Designed for Efficiency, Safety, Concurrency and Scalability
+- Statically typed
+- Garbage collected
+- Fast compile times
+- Minimal syntax
+
+* Go Development Environment
+
+You will need the go tools and runtime 
+(replace python with go and this is similar to the python world so far)
+
+Offical binaries are avaliable for:
+
+- FreeBSD, Linux, and Mac OS X tarballs
+- Mac OS X package installer
+- Windows
+
+.link http://golang.org/doc/install#install
+
+* Go Development Environment
+
+Go uses Workspaces
+
+You can think of workspaces as a replacement for virualenv
+
+What do workspaces look like?
+
+- A workspace is just a directory on your system
+
+How does Go know about my workspace?
+
+- $GOPATH=/path/to/workspace #BOOM!
+
+* Go Development Environment
+
+Wait!  What?!?!
+
+The go toolchain looks at your $GOPATH to find and install code
+
+A workspace has three top level directories
+
+/<workspace>
+    - /src <-- All of your code lives here
+    - /bin <-- Executables will be installed here (packages with a main)
+    - /pkg <-- Libraries will get installed here
+
+* Go Development Environment
+
+Let's create a workspace (Open the shell)
+
+* Go Toolchain
+
+All of the following tools are apart of the go package
+
+- compiler (go build)
+- compiler and run (go run)
+- docs generator (go doc)
+- unit testing (go test)
+- code formatter (go fmt)
+- package installer (go get)
+- race detector (available in Go 1.1)
+
+* Go program structure
+
+A go program has a few different parts
+
+- package declaration on the first line of the file
+- imports this is generally after the package declaration
+- consts
+- types 
+- functions
+
+* Go program structure
+
+Package declaration can be the name of your package and/or subpackage or main
+
+
