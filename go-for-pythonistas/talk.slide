@@ -1,16 +1,17 @@
 Go for Pythonistas
 
-Dan Worth
-Dramafever
-http://danworth.com
+Dan Worth 
 @djworth
+
+http://danworth.com
+http://meetup.com/GoLangPhilly
 
 * Topics Covered
 
 - What is Go?
 - Go Development Environment
 - Go Toolchain
-- Go program structure
+- Go Code
 - Common Data Structures (and their python equivalents) 
 - Unit Testing
 - Deployment
@@ -20,10 +21,28 @@ http://danworth.com
 
 - A new programming language (Developed by Google)
 - Designed for Efficiency, Safety, Concurrency and Scalability
-- Statically typed
+- Statically typed, but with a dynamic feel.
 - Garbage collected
 - Fast compile times
 - Minimal syntax
+- Open source (BSD)
+
+* What is Go?
+
+Go is a general-purpose programming language, like Python, Java, or C.
+
+Some common uses:
+
+- Server daemons
+- Command-line tools
+- Web applications
+- Games
+- Scientific computing
+- High frequency trading
+
+And many more.
+
+Whatever you do, there's a good chance that Go can help you to do it.
 
 * Go Development Environment
 
@@ -40,23 +59,28 @@ Offical binaries are avaliable for:
 
 * Go Development Environment
 
+Go cares about two environment variables
+
+- GOROOT
+- GOPATH
+
+    GOROOT should be set to the base go install directory
+    GOPATH is set to your current workspace (or project directory)
+
+* Go Development Environment
+
 Go uses Workspaces
 
 You can think of workspaces as a replacement for virualenv
 
-What do workspaces look like?
-
 - A workspace is just a directory on your system
-
-How does Go know about my workspace?
-
-- $GOPATH=/path/to/workspace #BOOM!
+- $GOPATH=/path/to/workspace
 
 * Go Development Environment
 
 Wait!  What?!?!
 
-The go toolchain looks at your $GOPATH to find and install code
+The go tools looks at your $GOPATH envirnoment variable to find and install code
 
 A workspace has three top level directories
 
@@ -71,7 +95,7 @@ Let's create a workspace (Open the shell)
 
 * Go Toolchain
 
-All of the following tools are apart of the go package
+All of the following tools are included in go
 
 - compiler (go build)
 - compiler and run (go run)
@@ -91,8 +115,80 @@ A go program has a few different parts
 - types 
 - functions
 
-* Go program structure
+* Go Code
 
-Package declaration can be the name of your package and/or subpackage or main
+Go Version
 
+.play main.go
 
+Python Version
+
+.code main.py
+
+* Go Code
+
+Python version of a user defined type
+
+.code udt.py
+
+* Go Code
+
+Go version of a user defined type
+
+.play udt.go
+
+* Go Code
+
+Go also has implict interfaces
+
+.play face.go
+
+* Common Data Structures (and their python equivalents) 
+
+Some basic python/go data structures
+
+    Python          Go
+    =======         =======
+    int             int, int32, int64
+    float           float, float32, float64
+    bytes           []byte
+    string          string   
+    tuple           array (mutable, fixed size)
+    list            slice
+    directory       map (ex. map[string]int)
+
+* Unit testing
+
+In go, Unit Testing is baked in
+
+.code foo/bar.go
+
+.code foo/bar_test.go
+
+* Deployment
+
+This still needs to be filled in with some examples
+
+* Common Gotchas going from Python to Go
+
+- No built-in type for sets (have to use maps and test for existence)
+- Having to always check errors (or at least explicitly ignore them)
+- No unpacking of a tuple or list into separate variables (e.g. x,y,x = [1,2,3])
+- Type casting from number to string (int64 -> string) is different than going from []byte -> string (just use string([]byte)). Need to use strconv.
+- String formatting is awkward, have to resort to fmt.Sprintf a lot
+- No constructors, so common idiom is to create NewType() functions that return the struct you want
+
+List is shortened from:
+
+.link http://blog.repustate.com/migrating-code-from-python-to-golang-what-you-need-to-know/2013/04/23/#tips Things we wish we knew
+
+* Useful links and references
+
+.link http://golang.org GoLang.org
+.link http://golang.org/pkg/ GoLang Package Documenation - http://golang.org/pkg/
+.link http://tour.golang.org Go Tour - http://tour.golang.org
+.link http://play.golang.org Go Web based REPL - http://play.golang.org
+
+IRC #go-nuts on freenode
+Google Groups golang-nuts
+http://twitter.com/go_nuts
