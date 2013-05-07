@@ -1,6 +1,6 @@
 Go for Pythonistas
 
-Dan Worth 
+Dan Worth
 @djworth
 
 http://danworth.com
@@ -12,7 +12,7 @@ http://meetup.com/GoLangPhilly
 - Go Development Environment
 - Go Toolchain
 - Go Code
-- Common Data Structures (and their python equivalents) 
+- Common Data Structures (and their python equivalents)
 - Unit Testing
 - Deployment
 - Common gotchas going from python to go
@@ -46,7 +46,7 @@ Whatever you do, there's a good chance that Go can help you to do it.
 
 * Go Development Environment
 
-You will need the go tools and runtime 
+You will need the go tools and runtime
 (replace python with go and this is similar to the python world so far)
 
 Offical binaries are avaliable for:
@@ -112,7 +112,7 @@ A go program has a few different parts
 - package declaration on the first line of the file
 - imports this is generally after the package declaration
 - consts
-- types 
+- types
 - functions
 
 * Go Code
@@ -143,7 +143,7 @@ Go also has implict interfaces
 
 .play face.go
 
-* Common Data Structures (and their python equivalents) 
+* Common Data Structures (and their python equivalents)
 
 Some basic python/go data structures
 
@@ -152,10 +152,10 @@ Some basic python/go data structures
     int             int, int32, int64
     float           float, float32, float64
     bytes           []byte
-    string          string   
+    string          string
     tuple           array (mutable, fixed size)
     list            slice
-    directory       map (ex. map[string]int)
+    dictionary       map (ex. map[string]int)
 
 * Unit testing
 
@@ -167,7 +167,12 @@ In go, Unit Testing is baked in
 
 * Deployment
 
-This still needs to be filled in with some examples
+- Go compiles to a single binary
+- Go runtime is linked into the single binary
+- Need to leverage something like Upstart to deamonize
+- Possible to cross compile different OS and ARCH using (GOOS AND GOARCH)
+
+.link http://dave.cheney.net/2012/09/08/an-introduction-to-cross-compilation-with-go Introduction to Cross Compilation with Go
 
 * Common Gotchas going from Python to Go
 
