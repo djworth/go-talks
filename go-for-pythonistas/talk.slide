@@ -6,15 +6,33 @@ Dan Worth
 http://danworth.com
 http://meetup.com/GoLangPhilly
 
-* Topics Covered
+* Goals for this talk
+
+I want to...
+
+- Get you excited about Go
+- Show you that Go is approachable for Python developers (This is no Erlang folks... joking)
+- Punt on any/all concurrency topics (let's chat a Triumph afterwards)
+
+* Getting you Excited
+
+Go is fast... real fast!  Each request is processed by fetching a single row from a simple database and then serialized as a JSON..  http://www.techempower.com/benchmarks/
+
+.image single_query.png
+
+* Getting you Excited
+
+.play welcome.go
+
+* Main Topics we'll be Covered
 
 - What is Go?
 - Go Development Environment
 - Go Toolchain
 - Go Code
 - Common Data Structures (and their python equivalents)
-- Unit Testing
-- Deployment
+- Unit Testing (light coverage)
+- Deployment (light coverage)
 - Common gotchas going from python to go
 
 * What is Go?
