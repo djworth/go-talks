@@ -1,0 +1,31 @@
+Reflect Package
+
+Dan Worth
+@djworth
+
+http://danworth.com
+
+* What is Reflect
+
+- Runtime type inspection
+- Extremely Abstract
+- Total PITA at first
+
+* When should I use Refect
+
+- As little as possible IMO
+- It's Slow
+- It's Cumbersome
+- It's magical
+
+* Show me some code
+
+.play ex1.go
+
+* Show me more code
+
+.play ex2.go
+
+* References
+
+.link http://golang.org/doc/articles/laws_of_reflection.html
