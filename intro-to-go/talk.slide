@@ -1,0 +1,110 @@
+Intro To Go
+
+Dan Worth
+@djworth
+
+http://danworth.com
+http://meetup.com/GoLangPhilly
+
+* About Me
+
+Dan Worth
+@djworth
+
+Engineer at AWeber
+Co-Organizer of GoLangPhilly
+~2 years working with Go
+
+* Origins of Go
+
+- Started at Google
+- Rob Pike, Ken Thompson and Robert Griesemer
+
+ "The three of us got together and decided that we hated C++." - Ken Thompson
+
+* Designed to solve Google size problems
+
+- Efficient for large projects and teams
+- Fast compile times
+- Concurrency
+- Multi-Core Hardware
+
+* Why Go?
+
+- Statically typed languages are efficient but typically overly complex
+- Dynamic languages can easy to use, error-rpone, inefficent and break down at scale
+- Concurrent programming is hard (threads, locks, headaches)
+
+
+- Speed, reliability or simplicity pick two
+- There must be a better way?
+
+ * Most of this slide is borrowed from an Andrew Gerrand presentation
+
+* What is Go?
+
+- Statically typed
+- Garbage Collected
+- Concurrency primatives
+- Originally designed as a Systems Language
+
+* Hello World
+
+Ok, let's look at some code
+
+.play web.go
+
+* Code organization
+
+ $ mkdir $HOME/go
+ $ export GOPATH=$HOME/go
+
+- *src* - contains Go source files organized into packages (one package per directory),
+- *pkg* - contains package objects, and
+- *bin* - contains executable commands.
+
+* Structure of a Go program
+
+- Package declaration
+- Import statements
+- *const*
+- *struct*, *interface* and/or *func*
+
+* Go is about composition
+
+Go is Object Oriented, but not in the usual way.
+
+- no classes (methods may be declared on any type)
+- no subtype inheritance
+- interfaces are satisfied implicitly (structural typing)
+
+The result: simple pieces connected by small interfaces.
+
+* Go Structs
+
+.play structs.go
+
+* Go Interfaces
+
+.play interface.go
+
+* Echo Server (Yay, interfaces)
+
+.play echo.go
+
+* Concurrency
+Go provides CSP-like concurrency primitives.
+
+- lightweight threads (goroutines)
+- typed thread-safe communication and synchronization (channels)
+
+* Let's make our Echo Server Concurrent (Yay, goroutines)
+
+.play concurrent_echo.go
+
+
+
+
+
+
+
