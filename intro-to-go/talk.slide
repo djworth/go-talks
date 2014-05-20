@@ -15,6 +15,14 @@ Engineer at AWeber
 Co-Organizer of GoLangPhilly
 ~2 years working with Go
 
+* What we're talking about
+
+- Review the Origins of Go
+- What & Why it was designed
+- How it was designed
+- Code Structure and Organization
+- Structs, Interfaces and Concurrency
+
 * Origins of Go
 
 - Started at Google
@@ -48,13 +56,13 @@ Co-Organizer of GoLangPhilly
 - Concurrency primatives
 - Originally designed as a Systems Language
 
-* Hello World
+* Hello World (Web Server)
 
 Ok, let's look at some code
 
 .play web.go
 
-* Code organization
+* Code organization (workspaces)
 
  $ mkdir $HOME/go
  $ export GOPATH=$HOME/go
@@ -101,6 +109,10 @@ Go provides CSP-like concurrency primitives.
 * Let's make our Echo Server Concurrent (Yay, goroutines)
 
 .play concurrent_echo.go
+
+* Questions?
+
+Thoughts and/or Questions?
 
 
 
