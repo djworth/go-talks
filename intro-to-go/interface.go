@@ -17,6 +17,6 @@ func MakeWalk(w Walker) {
 }
 
 func main() {
-	person := Person{}
+	person := &Person{}
 	MakeWalk(person)
 }
