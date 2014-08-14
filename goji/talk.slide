@@ -1,0 +1,87 @@
+Goji - Microframework for Golang
+http://goji.io
+
+Dan Worth
+@djworth
+
+http://danworth.com
+http://meetup.com/GoLangPhilly
+
+* About Me
+
+Dan Worth
+@djworth
+
+Engineer at AWeber
+Co-Organizer of GoLangPhilly
+~2 years working with Go
+
+* What we're going to talking about
+
+- What is Goji
+- Why *I* like Goji
+- How it was designed
+- Goji Routing and Middleware
+- Graceful Shutdown, and other Goji goodies
+
+* What is Goji
+
+- Web Framework
+- Small
+- Fast
+- Compatible with net/http
+
+* Why I like Goji
+
+- Small - I can read the code in a hour or two
+- Solves a minimal set of problems
+- Compatible with the stdlib
+- Not magical
+
+* Design/Philosophy of Goji
+
+- Of the Sinatra/Flask school for frameworks
+- Gives you enough rope to hang yourself
+- Context objects
+
+* Goji Routing
+
+*Patterns*
+- *string*: It will be interpreted as a Sinatra-like pattern. 
+- *regexp.Regexp*: The library assumes that it is a Perl-style regexp
+- *web.Pattern*
+
+*Handlers*
+- func(w http.ResponseWriter, r *http.Request)
+- func(c web.C, w http.ResponseWriter, r *http.Request)
+
+* Routing with named args
+
+.code routes.go
+
+* Routing using Regex
+
+.code regex.go
+
+* Using the Pattern interface
+
+- string and regex patterns use this interface
+.code pattern.go
+
+* Middleware Examples
+
+.code nocache.go /^func NoCache/,/^}/
+
+* Goji Goodies
+
+- Graceful shutdown
+
+* That's all I got
+
+- Recap
+
+* Questions?
+
+Thoughts and/or Questions?
+
+

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"net"
@@ -15,6 +16,7 @@ func main() {
 	}
 	for {
 		c, err := l.Accept()
+		fmt.Fprintf(c, "Connected!\n")
 		if err != nil {
 			log.Fatal(err)
 		}
